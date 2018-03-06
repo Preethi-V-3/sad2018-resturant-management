@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="Hmmmmm">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+  	<div ng-controller="syController">
+
+    <img src="images/firefox-icon.png" alt="My test image">
+</div>
+<h1 id="bigOne"></h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBf81gk9DM0tY7Ol3j_gCmoulCstJ51fmA",
+    authDomain: "project-hahn.firebaseapp.com",
+    databaseURL: "https://project-hahn.firebaseio.com",
+    projectId: "project-hahn",
+    storageBucket: "",
+    messagingSenderId: "563069477537"
+  };
+  firebase.initializeApp(config);
+
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
+    <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+
+
+      </body>
+
+
+</html>
