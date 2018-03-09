@@ -1,0 +1,52 @@
+<mat-card class="menu-panel">
+  <mat-card-title>
+    Angular Material Sidenav Demo
+  </mat-card-title>
+  <mat-card-content>
+    <mat-sidenav-container class="app-container">
+      <mat-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+        Sidenav content goes here!
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let mainitem of sidenavList">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ mainitem.name }}
+              </mat-panel-title>
+              <mat-panel-description>
+                <!-- enter the description if required -->
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-nav-list role="navigation">
+              <a mat-list-item *ngFor="let submenuname of mainitem.subMenu" (click)="onSelect(submenuname.name)">
+                {{ submenuname.name }}
+              </a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-sidenav>
+
+      <mat-sidenav-content class="app-sidenav-content">
+        <div class="app-sidenav-content">
+          {{ selectedSubMenu }}
+          <mat-list>
+            <mat-list-item *ngFor="let subitems of selectsubitems">
+              <div *ngFor="let item of subitems.items">
+                <div mat-line>
+                  {{ item.name }} {{ item.price }}
+                </div>
+                <br>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-sidenav-content>
+
+      <mat-sidenav #sidenav mode="side" position="end" opened="true" class="app-sidenav">
+          Sidenav end content goes here!
+      
+        </mat-sidenav>
+
+    </mat-sidenav-container>
+  </mat-card-content>
+</mat-card>

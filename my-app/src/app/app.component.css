@@ -1,0 +1,33 @@
+.background{
+    align-content: flex-start;
+    text-align:center;
+    /* background-image : url("favicon.ico"); */
+    background-size: cover;
+   background-position: center;
+   height: 50pc;
+   width: 100pc;
+}
+.text{
+    text-align: left;
+    color: brown;
+}
+nav{
+
+    display:inline-block;
+    margin:auto;
+    background-color:#5597b4;
+    box-shadow:0 1px 1px #ccc;
+    width: 100%;
+}
+
+
+nav a{
+    display:inline-block;
+    padding: 18px 30px;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none !important;
+    text-transform: uppercase;
+    background-color:transparent;
+}

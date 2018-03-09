@@ -1,0 +1,9 @@
+.reservetable-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reservetable-container > * {
+    width: 100%;
+  }
+  
