@@ -3,8 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatMenuModule, MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule,
-   MatCardModule, MatSidenavModule, MatTabsModule, MatListModule, MatExpansionModule } from '@angular/material';
+import { MatMenuModule,
+   MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule,
+   MatCardModule, MatSidenavModule, MatTabsModule, MatListModule, MatExpansionModule , MatDatepickerModule,
+   MatToolbarModule,
+   MatSelectModule,
+   MatNativeDateModule,
+  } from '@angular/material';
 
 import { routing }  from './app.routing';
 
@@ -42,7 +47,8 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatTabsModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

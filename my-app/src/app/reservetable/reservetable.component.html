@@ -1,17 +1,24 @@
-<div class="reservetable-container">
-    
-   
-    
-    <!-- <mat-form-field>
-      <textarea matInput placeholder="Textarea"></textarea>
-    </mat-form-field>
+<div class="tablereservation">
+  <div class="tablewrapper">
+      <h1>Reserve Table</h1>
+    </div>
+</div>
   
-    <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="o <mat-form-field>
-        <input matInput [(ngModel)]="input" placeholder="Input">
-      </mat-form-field>ption">Option</mat-option>
-      </mat-select>
-    </mat-form-field> -->
-  </div>
+<div>
+  <h1 align="center">Reservation</h1>
+  <div align="center">
+  <mat-card class="reservetable-card">
+  <mat-card-header>
+      <h1 align="center">Reserve your table for any occasion</h1>
+  </mat-card-header>
+
+  <mat-card-content>
+        <input matInput [(ngModel)]="date" type="date" name="date"  class="textwrapper"/><br><br>
+        <input matInput placeholder="No of Persons" type="number" name="person" min="0" class="textwrapper"><br><br>
+        <input matInput [(ngModel)]="time" type="time"  class="textwrapper"/><br><br> 
+        <button mat-raised-button ng-click="myFunc(date.value,No of Persons.value)" type="submit">Reserve Now</button>
+  </mat-card-content>
+  </mat-card>  
   
+</div> 
+</div>
