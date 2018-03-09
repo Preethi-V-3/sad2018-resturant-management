@@ -1,0 +1,26 @@
+.aboutus{
+    background-image: url("assets/images/aboutus.jpg");
+    background-attachment: scroll;
+    height: 40pc;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.aboutuswrapper{
+    font-family: serif;
+    text-align: center;
+    padding: 10pc;
+    font-size: 2in;
+    color: darkorange;
+}
+.content{
+    font-family: serif;
+    font-size: 2pc;
+}
+.header{
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+    color: white; }

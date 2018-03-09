@@ -3,40 +3,30 @@
       <h1>Contact Us</h1>
     </div>
 </div>
-<div>
-  <h1 align="center">Contact</h1></div>
-  <br>
-  <div class="address">
-    <h1 style="font-family: Calibri;color:navy"> Rangolee Indian Cuisnie</h1>
-   <p> <i class="fa fa-location-arrow" style="font-size:30px;color:green">  Frankfurt</i></p>
-<p> <i class="fa fa-phone" style="font-size:30px;color:green">  Phone:+123456</i></p>
-<p>  <i class="fa fa-fax" style="font-size:30px;color:green">Fax:+0987665</i></p> 
-  <p> <i class="fa fa-envelope" style="font-size:30px;color:green">  E-mail:abc@gmail.com</i></p> 
-  <br><br>
+<div class="infotext">
+  <label style="float:left">Email:</label><br><br>
+  <div>
+    <div align="center">
+    <mat-card class="reservetable-card">
+    <mat-card-header>
+        <h1 align="center">Reserve your table for any occasion</h1>
+    </mat-card-header>
   
-  <h1 align="center" style="color:black">Contact form</h1>
-  <h2 style="color:black">Do you have anything in your mind to tell us? Please don't hesitate to get in touch to us via our contact form.</h2>
-      <div class="infotext">
-        <label for="name"  >Full Name:</label><br>
-        <input type="text" name="name" placeholder="Enter your name" class= "textbox" ><br><br>
-        <label>Message:</label><br>
-        </div>
-        
-      <div class="infotext"> 
-          <label for="email"  >Email Address:</label><br>
-          <input type="email" name="email" placeholder="youremail@mail.com" class= "textbox" ><br><br>
-      </div>
+    <mat-card-content>
+          <input matInput [(ngModel)]="date" type="date" name="date"  class="textwrapper"/><br><br>
+          <input matInput placeholder="No of Persons" type="number" name="person" min="0" class="textwrapper"><br><br>
+          <input matInput [(ngModel)]="time" type="time"  class="textwrapper"/><br><br> 
+          <button mat-raised-button ng-click="myFunc(date.value,No of Persons.value)" type="submit" style="background-color:brown">Reserve Now</button>
+    </mat-card-content>
+    </mat-card>  
     
-  <div class="message" >
-      <div class="messagetext">
- 
-   <textarea input type="text" placeholder="write your message" name="message" class="messagetextbox"></textarea> 
-    <br><br>
-        <button id="send" class="sendbtn" onclick="SendFunction"  style="height:1cm;width:3cm;margin-left:30px;color:navy" >Send</button>
-    <br>
-  </div>
+  </div> 
+  </div></div>div>
+  <div class="infotext">
+  <input type="text" placeholder="Enter your name" class="textbox"><br><br>
+  <label>Name:</label><br><br>
+  <input type="text" placeholder="Enter your name" class="textbox"><br><br>
+  <label>Message:</label><br><br>
+  <textarea input type="text" placeholder="Enter your name" class="textbox"></textarea><br><br>
+  <button class="sendbtn">Send</button>
 </div>
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
-  </div>
