@@ -4,15 +4,29 @@
 }
   
 .app-sidenav-content {
-    display: flex;
+    display: flex !important;
     height: 100%;
     align-items: center;
     justify-content: center;
 }
   
 .app-sidenav {
+    background-color:beige;
+    color:black;
     padding: 20px;
 }
+:not([class*=mat-elevation-z]).mat-expansion-panel {
+    box-shadow: none;
+}
+
+/* ::ng-deep .orderonline-expansionpanel .mat-elevation-z {
+    padding: 0;
+    -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+} */
+
 .menu-panel {
     margin: 10px;
 }

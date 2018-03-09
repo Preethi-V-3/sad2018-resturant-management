@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   
-  title = 'Resturant Management app';
   navLinks : Array<{label: string, path: string}>;
   // welcome : string;
   

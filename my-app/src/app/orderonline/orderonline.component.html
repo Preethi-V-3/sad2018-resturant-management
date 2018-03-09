@@ -1,52 +1,52 @@
-<mat-card class="menu-panel">
-  <mat-card-title>
-    Angular Material Sidenav Demo
-  </mat-card-title>
-  <mat-card-content>
-    <mat-sidenav-container class="app-container">
-      <mat-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
-        Sidenav content goes here!
-        <mat-accordion>
-          <mat-expansion-panel *ngFor="let mainitem of sidenavList">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                {{ mainitem.name }}
-              </mat-panel-title>
-              <mat-panel-description>
-                <!-- enter the description if required -->
-              </mat-panel-description>
-            </mat-expansion-panel-header>
+<div class="menu-panel">
 
-            <mat-nav-list role="navigation">
-              <a mat-list-item *ngFor="let submenuname of mainitem.subMenu" (click)="onSelect(submenuname.name)">
-                {{ submenuname.name }}
-              </a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </mat-sidenav>
+  <mat-sidenav-container class="app-container">
+    <mat-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+      <mat-accordion>
+        <mat-expansion-panel class="orderonline-expansionpanel" [expanded]="first" *ngFor="let mainitem of sidenavList; first as first">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ mainitem.name }}
+            </mat-panel-title>
+            <mat-panel-description>
+              <!-- enter the description if required -->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
 
-      <mat-sidenav-content class="app-sidenav-content">
-        <div class="app-sidenav-content">
-          {{ selectedSubMenu }}
-          <mat-list>
-            <mat-list-item *ngFor="let subitems of selectsubitems">
-              <div *ngFor="let item of subitems.items">
-                <div mat-line>
-                  {{ item.name }} {{ item.price }}
-                </div>
-                <br>
-              </div>
-            </mat-list-item>
-          </mat-list>
-        </div>
-      </mat-sidenav-content>
+          <mat-nav-list role="navigation">
+            <a mat-list-item *ngFor="let submenuname of mainitem.subMenu" (click)="onSelect(submenuname.name)">
+              {{ submenuname.name }}
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
 
-      <mat-sidenav #sidenav mode="side" position="end" opened="true" class="app-sidenav">
-          Sidenav end content goes here!
-      
-        </mat-sidenav>
+    <mat-sidenav-content class="app-sidenav-content">
+      <div class="app-sidenav-content">
+        <mat-selection-list #subItems *ngFor="let subitems of selectsubitems">
+          <mat-list-option *ngFor="let item of subitems.items; last as last">
+            <h3 mat-line>
+              {{ item.name }} {{ item.price }}
+            </h3>
+            <h4 mat-line> Enter the item description here if required </h4>
+            <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+          </mat-list-option>
+        </mat-selection-list>
+      </div>
+    </mat-sidenav-content>
 
-    </mat-sidenav-container>
-  </mat-card-content>
-</mat-card>
+    <mat-sidenav #sidenav mode="side" position="end" opened="true" class="app-sidenav">
+      Sidenav end content goes here!
+      <span> No of items : {{ subItems.selectedOptions.selected.length }} </span>
+      <mat-divider></mat-divider>
+      <mat-list dense>
+          <mat-list-item> Pepper </mat-list-item>
+          <mat-list-item> Salt </mat-list-item>
+          <mat-list-item> Paprika </mat-list-item>
+         </mat-list>
+    </mat-sidenav>
+
+
+  </mat-sidenav-container>
+</div>

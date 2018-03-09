@@ -1,20 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="background">
-  <h1 class="text">Rangolee</h1>
-  <h2>
-      Welcome to {{ title }}!
-    </h2>
-  
-  <nav class="navbar" mat-tab-nav-bar>
-      <a mat-tab-link 
-      *ngFor="let link of navLinks"
-         [routerLink]="link.path"
-         routerLinkActive #rla="routerLinkActive"
-           [active]="rla.isActive">
-        {{link.label}}
-      </a>
-    
-     <!--  <div class="navbar-header">
+  <mat-toolbar class="toolbar" role="toolbar" >
+    <mat-toolbar-row>
+      <h1 class="text">Rangolee</h1>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <nav class="navbar" mat-tab-nav-bar>
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+          {{link.label}}
+        </a>
+
+        <!--  <div class="navbar-header">
         <a mat-tab-link routerLink="/home" routerLinkActive="active">Home</a>
         <a mat-tab-link routerLink="/about" routerLinkActive="active">About</a>
         <a mat-tab-link routerLink="/menu" routerLinkActive="active">Menu</a>
@@ -22,12 +18,14 @@
         <a mat-tab-link routerLink="/orderonline" routerLinkActive="active">Order Online</a>
         <a mat-tab-link routerLink="/contactus" routerLinkActive="active">Contact Us</a>
         </div> -->
-  </nav>
-  <div class="container">
-  
-      <!-- routing here -->
-    
-      <router-outlet></router-outlet>
+      </nav>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div>
+
+    <!-- routing here -->
+
+    <router-outlet></router-outlet>
 
   </div>
 
