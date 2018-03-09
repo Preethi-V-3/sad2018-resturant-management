@@ -1,32 +1,33 @@
 
 .tablereservation{
   background-image: url("assets/images/reserved.jpg");
-  background-attachment: scroll;
-  height: 40pc;
-  width: 106pc;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-position: center;
-  font-style: oblique;
-  font-size:0.48in;
-  font-weight: bold;
   align-items: center;
+
 }
 .tablewrapper{
   font-family: serif;
+  font-style: oblique;
+  font-size:0.48in;
+  font-weight: bold;
   text-align: center;
   padding: 10pc;
   color:floralwhite;
 }
 .reservetable-card {
-
   width: 400px;
   height: 400px;
   align-items: center;
-}
 
+}
 .textwrapper{
   width:300px; 
   height:25px; 
   border: 2px solid black;
   padding: 0pc;
+  background-color: crimson;
 }

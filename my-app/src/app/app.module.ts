@@ -58,6 +58,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatTabsModule,
     MatListModule,
+    MatToolbarModule,
     MatExpansionModule,
     MatDatepickerModule,
     MatToolbarModule,
