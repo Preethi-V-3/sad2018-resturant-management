@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatMenuModule, MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule,
    MatCardModule, MatSidenavModule, MatTabsModule, MatListModule, MatExpansionModule } from '@angular/material';
-
+   import { AgmCoreModule } from '@agm/core';
+   
 import { routing }  from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -42,9 +43,13 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatTabsModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
