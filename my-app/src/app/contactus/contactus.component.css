@@ -1,24 +1,22 @@
 agm-map {
     
-    position: absolute;top:470px; right:20px; width:600px; height:300px;
+    position: absolute;top:77pc; left:0; width:100%; height:300px;
 
   }
 
   .contact{
     background-image: url("assets/images/reserved.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 50vh;
+	height: 100%;
 	background-position: center center;
 	position: relative;
-    background-position: center;
     font-style: oblique;
     font-size:0.40in;
     font-weight: bold;
     align-items: center;
-    position: relative;
     
 }
 .contactwrapper{
@@ -28,39 +26,44 @@ agm-map {
     color:floralwhite;
 }
 .address{
-    padding-left: 10px;
+   
     font-family:cursive;
     color:firebrick;
+    float: right;
+    position: absolute;top:800px; right:100px; width:400px; height:300px;
+
+
 }
 .infotext{
     font-weight:bold;
     font-size: 0.3in;
-   float: left;
-
+   padding-right:70%;
 }
+
 .textbox{
     border: 2px solid black;
     padding: 20px;
-    width:350px;
+    width:300px;
      height:1px;
     text-align: start;
+    float: left;
 }
-.message{
-    margin-block-start:2.5in;
-}
-.messagetext{
-    font-weight:bold;
-    font-size: 0.3in;
 
-   
-}
 .messagetextbox{
     border: 2px solid black;
-    height: 200px;
-    width: 700px;
-    margin-left:20px;
+    height: 100px;
+    width: 80%;
+    margin-right:10px;
    font-size: 15px;
+   float: left;
+  
+}
+.sendbtn{
+    height:1cm;
+    width:3cm;
    
+    color:navy;
+    float: left;
 }
 .reservetable-card {
     width: 400px;

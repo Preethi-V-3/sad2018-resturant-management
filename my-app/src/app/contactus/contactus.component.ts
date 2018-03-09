@@ -9,3 +9,4 @@ export class ContactusComponent {
   lat: number = 50.1109;
   lng: number = 8.6821;
 }
+

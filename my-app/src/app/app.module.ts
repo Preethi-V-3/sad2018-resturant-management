@@ -49,6 +49,7 @@ import { HomeComponent } from './home/home.component';
     MatSidenavModule,
     MatTabsModule,
     MatListModule,
+    MatToolbarModule,
     MatExpansionModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
