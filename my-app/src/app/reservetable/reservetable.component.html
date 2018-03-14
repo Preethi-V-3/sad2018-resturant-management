@@ -1,18 +1,16 @@
-<div class="background-image">
+
 <div class="tablereservation">
   <div class="tablewrapper">
       <h1>Reserve Table</h1>
     </div>
-</div>
-  
+</div>  
 <div>
-  <h1 align="center">Reservation</h1>
+  <h1 align="center">Reservation</h1></div> 
   <div align="center">
   <mat-card class="reservetable-card">
   <mat-card-header>
       <h1 align="center">Make a Reservation for any occasion</h1>
   </mat-card-header>
-
   <mat-card-content>
       <div class="datepicker">
           <input matInput [min]="minDate" [matDatepicker]="picker" popup-placement="auto bottom-right" placeholder="Choose a date" [value]="date.value">
@@ -25,6 +23,6 @@
         <button mat-raised-button ng-click="EmailNotification()" type="submit" class="reservebtn">Reserve Now</button>
   </mat-card-content>
   </mat-card>  
-</div> 
-</div></div>
+
+</div>
 

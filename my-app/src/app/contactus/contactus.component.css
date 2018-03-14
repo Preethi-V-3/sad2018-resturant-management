@@ -5,7 +5,7 @@ agm-map {
   }
 
   .contact{
-    background-image: url("assets/images/reserved.jpg");
+    background-image: url("assets/images/contact.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
 	background-size: cover;
@@ -23,7 +23,7 @@ agm-map {
     font-family: serif;
     text-align: center;
     padding: 10pc;
-    color:floralwhite;
+    color:black;
 }
 .address{
    
