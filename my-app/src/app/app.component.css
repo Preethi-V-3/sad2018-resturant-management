@@ -1,7 +1,6 @@
 .background{
     align-content: flex-start;
     text-align:center;
-    /* background-image : url("favicon.ico"); */
     background-size: cover;
    background-position: center;
 }
@@ -24,4 +23,121 @@ nav a{
     font-size:16px;
     text-transform: uppercase;
     background-color:transparent;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    margin-left: 75px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#social {
+    margin-left: 60%;
+   position:fixes;
+  }
+  
+  .smGlobalBtn { 
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border:1px solid #ddd; 
+      box-shadow: 0 3px 3px #999;
+      padding: 0px;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 27px;
+      -moz-border-radius:27px;
+      -webkit-border-radius:27px;
+  }
+  
+  .facebookBtn{
+      background: #4060A5;
+  }
+  
+  .facebookBtn:before{ 
+      font-family: "FontAwesome";
+      content: "\f09a"; 
+  }
+  
+  .facebookBtn:hover{
+      color: #4060A5;
+      background: #fff;
+      border-color: #4060A5; 
+  }
+  
+  .twitterBtn{
+      background: #00ABE3;
+  }
+  
+  .twitterBtn:before{
+        font-family: "FontAwesome";
+        content: "\f099"; 
+        
+  }
+  
+  .twitterBtn:hover{
+        color: #00ABE3;
+        background: #fff;
+        border-color: #00ABE3;
+  }
+  
+  .googleplusBtn{
+      background: #e64522;
+  }
+  
+  .googleplusBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0d5"; 
+  }
+  
+  .googleplusBtn:hover{
+        color: #e64522;
+        background: #fff;
+        border-color: #e64522;
+  }
+  
+  .linkedinBtn{
+      background: #0094BC;
+  }
+  
+  .linkedinBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0e1"; 
+  }
+  
+  .linkedinBtn:hover{
+        color: #0094BC;
+        background: #fff;
+        border-color: #0094BC;
+  }
+
+  .spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }

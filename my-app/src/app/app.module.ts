@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
+import {MatDatepickerModule} from '@angular/material/datepicker'
    
 import { MatMenuModule,
    MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule,
-   MatCardModule, MatSidenavModule, MatTabsModule, MatListModule, MatExpansionModule , MatDatepickerModule,
+   MatCardModule, MatSidenavModule, MatTabsModule, MatListModule, MatExpansionModule ,
    MatToolbarModule,
    MatSelectModule,
    MatNativeDateModule,
@@ -51,13 +52,13 @@ import { HomeComponent } from './home/home.component';
     MatListModule,
     MatToolbarModule,
     MatExpansionModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
     }),
-    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

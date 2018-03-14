@@ -4,31 +4,34 @@
       <span>
         <h1 class="text">Rangolee</h1>
       </span>
+      <div id="social">
+          <h3>Follow us at
+          <a class="facebookBtn smGlobalBtn" href="#" ></a>
+          <a class="twitterBtn smGlobalBtn" href="#" ></a>
+          <a class="googleplusBtn smGlobalBtn" href="#" ></a>
+          <a class="linkedinBtn smGlobalBtn" href="#" ></a>
+        </h3>
+        </div>
     </mat-toolbar>
     <nav class="navbar" mat-tab-nav-bar>
-        <a mat-tab-link 
-        *ngFor="let link of navLinks"
-           [routerLink]="link.path"
-           routerLinkActive #rla="routerLinkActive"
-             [active]="rla.isActive">
-          {{link.label}}
-        </a>
-      
-       <!--  <div class="navbar-header">
-          <a mat-tab-link routerLink="/home" routerLinkActive="active">Home</a>
-          <a mat-tab-link routerLink="/about" routerLinkActive="active">About</a>
-          <a mat-tab-link routerLink="/menu" routerLinkActive="active">Menu</a>
-          <a mat-tab-link routerLink="/reservetable" routerLinkActive="active">Reserve Table</a>
-          <a mat-tab-link routerLink="/orderonline" routerLinkActive="active">Order Online</a>
-          <a mat-tab-link routerLink="/contactus" routerLinkActive="active">Contact Us</a>
-          </div> -->
-    </nav>
+
+        <ul>
+            <li><a class="active" href="/home" translate>Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/orderonline">Online Order</a></li>
+            <li><a href="/reservetable">ReserveNow</a></li>
+            <li><a href="/contactus">Contact</a></li>
+          </ul>
+    </nav> 
     <div>
-    
-        <!-- routing here -->
-      
+        <!-- routing here -->      
         <router-outlet></router-outlet>
-  
     </div>
-  
   </div>
+  <mat-toolbar class="toolbar">
+    <span class='spacer'></span>
+      <h3>© Copyright Rangolee authentic Indian cuisine.</h3>
+    <span class='spacer'></span>
+  </mat-toolbar>
+ 

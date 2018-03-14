@@ -1,26 +1,27 @@
 .aboutus{
     background-image: url("assets/images/reserved.jpg");
-    background-attachment: scroll;
-    height: 40pc;
+    background-attachment: fixed;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: center;
+    align-items: center;
 }
 .aboutuswrapper{
     font-family: serif;
+    font-style: oblique;
+    font-size:0.48in;
+    font-weight: bold;
     text-align: center;
     padding: 10pc;
-    font-size: 2in;
-    color: darkorange;
+    color:floralwhite;
 }
 .content{
     font-family: serif;
-    font-size: 2pc;
+    font-size: 1.5pc;
 }
 .header{
     font-family: serif;
     font-weight: bold;
     text-align: center;
 }
-.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-    color: white; }
