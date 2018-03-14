@@ -1,6 +1,6 @@
 
 .back{
-    background-image: url("assets/images/reserved.jpg");
+    background-image: url("assets/images/menu.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
 	background-size: cover;
@@ -17,42 +17,5 @@
     font-family: serif;
     text-align: center;
     padding: 10pc;
-    color:floralwhite;
-}
-.menuimg{
-	float: left;
-	background-image: url("assets/images/DEEYA_INDIAN_MENU-1.jpg");
-	height:50pc;
-	background-size: 600px;
-	width: 600px;
-    padding-left: 50px;
-    margin-top:70px;
-    background-repeat: no-repeat;
-}
-.menuimg1{
-	float: left;
-	background-image: url("assets/images/DEEYA_INDIAN_MENU-2.jpg");
-	height:50pc;
-	background-size: 600px;
-	width: 600px;
-    margin-top:70px;
-    background-repeat: no-repeat;
-}
-.menuimg2{
-	float: left;
-	background-image: url("assets/images/DEEYA_INDIAN_MENU-3.jpg");
-	height:50pc;
-	background-size: 600px;
-	width: 600px;
-    padding-left: 50px;
-    background-repeat: no-repeat;
-}
-.menuimg3{
-	float: left;
-	background-image: url("assets/images/DEEYA_INDIAN_MENU-4.jpg");
-	height:50pc;
-	background-size: 600px;
-    width: 600px;
-    background-repeat: no-repeat;
-    
+    color:black;
 }

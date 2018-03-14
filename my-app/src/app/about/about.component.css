@@ -1,5 +1,5 @@
 .aboutus{
-    background-image: url("assets/images/reserved.jpg");
+    background-image: url("assets/images/about.jpg");
     background-attachment: fixed;
     height: 100%;
     width: 100%;
@@ -14,7 +14,7 @@
     font-weight: bold;
     text-align: center;
     padding: 10pc;
-    color:floralwhite;
+    color:black;
 }
 .content{
     font-family: serif;
