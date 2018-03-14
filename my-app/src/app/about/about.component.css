@@ -1,17 +1,20 @@
 .aboutus{
     background-image: url("assets/images/about.jpg");
     background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+    height: auto;
+    max-width: 100%;
+	background-position: center center;
+	position: relative;
+    font-style: oblique;
+    font-size:0.40in;
+    font-weight: bold;
     align-items: center;
 }
 .aboutuswrapper{
     font-family: serif;
-    font-style: oblique;
-    font-size:0.48in;
-    font-weight: bold;
     text-align: center;
     padding: 10pc;
     color:black;
