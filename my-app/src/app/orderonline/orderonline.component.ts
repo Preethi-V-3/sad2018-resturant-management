@@ -88,6 +88,7 @@ export class OrderonlineComponent implements OnInit {
 }
 
   ngOnInit() {
+    this.onSelect(this.selectedSubMenu);
   }
 
 }

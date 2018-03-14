@@ -9,11 +9,12 @@
     color: brown;
 }
 .toolbar{
-    background-color:#5597b4;
+    align-content:center;
+    background-color:#ffffff;
 }
 
 .navbar{
-    background-color:#5597b4;
+    background-color:rgb(34, 34, 34);
 }
 
 
