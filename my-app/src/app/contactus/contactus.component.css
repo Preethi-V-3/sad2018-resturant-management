@@ -1,6 +1,7 @@
 agm-map {
     
-    position: absolute;top:44pc; left:53pc; width:35pc; height:300px;
+    position: absolute;top:44pc; right:3pc; width:30pc; height:300px;
+    float:left;
 
   }
 
@@ -23,7 +24,7 @@ agm-map {
     font-family: serif;
     text-align: center;
     padding: 10pc;
-    color:black;
+    color:#FFE57F;
 }
 .infotext{
     font-weight:bold;
