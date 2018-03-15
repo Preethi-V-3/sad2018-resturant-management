@@ -1,67 +1,68 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="background">
-<<<<<<< HEAD
-  <mat-toolbar class="toolbar" role="toolbar" >
-    <mat-toolbar-row>
-      <h1 class="text">Rangolee</h1>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-      <nav class="navbar" mat-tab-nav-bar>
-        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
-          {{link.label}}
-        </a>
-
-        <!--  <div class="navbar-header">
-        <a mat-tab-link routerLink="/home" routerLinkActive="active">Home</a>
-        <a mat-tab-link routerLink="/about" routerLinkActive="active">About</a>
-        <a mat-tab-link routerLink="/menu" routerLinkActive="active">Menu</a>
-        <a mat-tab-link routerLink="/reservetable" routerLinkActive="active">Reserve Table</a>
-        <a mat-tab-link routerLink="/orderonline" routerLinkActive="active">Order Online</a>
-        <a mat-tab-link routerLink="/contactus" routerLinkActive="active">Contact Us</a>
-        </div> -->
-      </nav>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <div>
-
-    <!-- routing here -->
-
-    <router-outlet></router-outlet>
-
-  </div>
-
-</div>
-=======
-    <mat-toolbar class="toolbar">
-      <span>
-        <h1 class="text">Rangolee</h1>
-      </span>
+  <section class="app">
+    <mat-toolbar class="toolbar" role="header">
+        <mat-toolbar-row>
+            <mat-icon class="toolbar-icon">delete</mat-icon>
+            <h1 class="text">Rangolee</h1>
+            <span class="toolbar-row-spacer"></span>
+            <button onclick="loginComponent()"> Login/Register </button>
+          </mat-toolbar-row>
     </mat-toolbar>
-    <nav class="navbar" mat-tab-nav-bar>
-        <a mat-tab-link 
-        *ngFor="let link of navLinks"
-           [routerLink]="link.path"
-           routerLinkActive #rla="routerLinkActive"
-             [active]="rla.isActive">
-          {{link.label}}
-        </a>
-      
-       <!--  <div class="navbar-header">
-          <a mat-tab-link routerLink="/home" routerLinkActive="active">Home</a>
-          <a mat-tab-link routerLink="/about" routerLinkActive="active">About</a>
-          <a mat-tab-link routerLink="/menu" routerLinkActive="active">Menu</a>
-          <a mat-tab-link routerLink="/reservetable" routerLinkActive="active">Reserve Table</a>
-          <a mat-tab-link routerLink="/orderonline" routerLinkActive="active">Order Online</a>
-          <a mat-tab-link routerLink="/contactus" routerLinkActive="active">Contact Us</a>
-          </div> -->
-    </nav>
-    <div>
-    
-        <!-- routing here -->
-      
-        <router-outlet></router-outlet>
-  
+    <div [class.sticky]="navIsFixed">
+      <nav #navbar mat-tab-nav-bar>
+        <ul>
+          <li>
+            <a class="active" href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/about">About us</a>
+          </li>
+          <li>
+            <a href="/menu">Menu</a>
+          </li>
+          <li>
+            <a href="/orderonline">Online Order</a>
+          </li>
+          <li>
+            <a href="/reservetable">ReserveNow</a>
+          </li>
+          <li>
+            <a href="/contactus">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  
-  </div>
->>>>>>> 1be54548ff6fb0f91e1732941117164bfcc3d132
+  </section>
+  <router-outlet></router-outlet>
+</div>
+<h1>Information Request</h1>
+<form [formGroup]="form" (ngSubmit)="sendEmail()">
+  <input type="text" placeholder="Name" formControlName="name">
+  <input type="text" placeholder="Email" formControlName="email">
+  <textarea placeholder="Message" formControlName="message">
+  </textarea>
+  <button type="submit" [disabled]="form.invalid">Submit</button></form>
+<!-- <div class="container-fluid">
+    
+    <div style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="item">Item</label> <input type="text"
+            class="form-control" placeholder="Enter content..." id="item"
+            required [(ngModel)]="itemValue" name="item">
+        </div>
+   
+        <div class="btn-group">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+   
+    <h2>Content from Firebase</h2>
+    <div class="col-md-3">
+      <pre *ngFor="let item of items | async">
+              {{ item.component }}
+      </pre>
+    </div>
+  </div> -->

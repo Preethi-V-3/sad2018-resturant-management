@@ -1,9 +1,12 @@
 .background{
-    align-content: flex-start;
+    align-content: flex;
     text-align:center;
     /* background-image : url("favicon.ico"); */
     background-size: cover;
    background-position: center;
+}
+.app {
+    height: 25vh;
 }
 .text{
     text-align: left;
@@ -11,18 +14,57 @@
 }
 .toolbar{
     align-content:center;
-    background-color:#ffffff;
 }
 
-.navbar{
+.toolbar-icon {
+    padding: 0 14px;
+  }
+  
+  .toolbar-row-spacer {
+    flex: 1 1 auto;
+  }
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+    
+nav {
+    width: 100%  !important;
     background-color:rgb(34, 34, 34);
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-nav a{
-    color:#fff !important;
-    font-weight:bold;
-    font-size:16px;
-    text-transform: uppercase;
-    background-color:transparent;
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    margin-left: 75px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li a:active {
+    color: white;
+    background-color: green;
 }

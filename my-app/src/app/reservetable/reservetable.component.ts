@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-reservetable',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservetableComponent implements OnInit {
 
-  constructor() { }
+  date:any;
+  minDate = new Date();
+
+  constructor() {
+    this.date = new FormControl(new Date());
+   }
 
   ngOnInit() {
   }
-
 }
