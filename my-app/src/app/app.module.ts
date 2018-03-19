@@ -70,8 +70,6 @@ import { WINDOW_PROVIDERS } from './window.service';
     MatSelectModule,
     MatNativeDateModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule, // for authentication
     AngularFireDatabaseModule, // for database
   ],
