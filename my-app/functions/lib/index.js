@@ -47,19 +47,22 @@ exports.httpEmailSendGrid = functions.https.onRequest((req, res) => {
         return Promise.reject(err);
     });
 });
-//nodemailer code
-const nodemailer = require('nodemailer');
+//nodemailer code run npm install nodemailer
+/* const nodemailer = require('nodemailer');
 const gmailEmail = encodeURIComponent(functions.config().gmail.email);
 const gmailPassword = encodeURIComponent(functions.config().gmail.password);
 const mailTransport = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    secure: true,
-    port: 465,
-    service: 'gmail',
-    auth: {
-        // type: 'OAuth2',
-        user: `${gmailEmail}`,
+    host:  "smtp.gmail.com", // hostname
+    secure:  true, // use SSL
+    port:  465, // port for secure SMTP
+   service : 'gmail',
+    auth:  {
+       // type: 'OAuth2',
+        user:  `${gmailEmail}`,
         pass: `${gmailPassword}`,
+       // clientId:  "945185891851-e5t77dg4d2qe6h57dui1rjt8op6ql0q5.apps.googleusercontent.com",
+       // clientSecret:  "_ONwhRL8BXNilXLwi7z_NXQz",
+       // refreshToken: "1/OOefFcq0pg1xBxk1nVx2YvZKIwfWAvFMLImVpb56j7Q"
     }
 });
 exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWrite(event => {
@@ -68,18 +71,23 @@ exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWri
     if (snapshot.previous.val() || !snapshot.val().name) {
         return null;
     }
+
     const val = snapshot.val();
+
     const mailOptions = {
         to: val.email,
         subject: `Information Request from ${val.gmailEmail}`,
         html: val.html,
-        text: `Your message content. \n 
-          Subject: ${val.subject} \n 
+        text: `Your message content. \n
+          Subject: ${val.subject} \n
           Sender's Name: ${val.name} \n
           Content: ${val.message}`
     };
-    return mailTransport.sendMail(mailOptions).then(() => console.log(`New mail confirmation email sent to:`, val.email))
-        .catch((error) => console.error('There was an error while sending the email:', error));
+    return mailTransport.sendMail(mailOptions).then(() =>
+    console.log(`New mail confirmation email sent to:`, val.email))
+    .catch((error) =>
+    console.error('There was an error while sending the email:', error));
+
     /*mailTransport.sendMail(mailOptions,  function (error,  response) {
         if (error) {
             console.log(error);
@@ -89,6 +97,6 @@ exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWri
 
         // if you don't want to use this transport object anymore, uncomment following line
         mailTransport.close(); // shut down the connection pool, no more messages
-    });*/
-});
+    });
+}); */ 
 //# sourceMappingURL=index.js.map

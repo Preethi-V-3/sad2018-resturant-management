@@ -1,26 +1,46 @@
 .aboutus{
-    background-image: url("assets/images/reserved.jpg");
-    background-attachment: scroll;
-    height: 40pc;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+    background-image: url("assets/images/about.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+    height: auto;
+    max-width: 100%;
+	background-position: center center;
+	position: relative;
+    font-style: oblique;
+    font-size:0.40in;
+    font-weight: bold;
+    align-items: center;
 }
 .aboutuswrapper{
     font-family: serif;
     text-align: center;
     padding: 10pc;
-    font-size: 2in;
-    color: darkorange;
+    color:#FFE57F;
 }
 .content{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
     font-family: serif;
-    font-size: 2pc;
+    font-size: 1.5pc;
+}
+img {
+  display:table-cell;
+  vertical-align:middle;
+  margin:auto;
 }
 .header{
+    font-size: 1.8pc;
     font-family: serif;
     font-weight: bold;
     text-align: center;
 }
-.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-    color: white; }
+.footer{
+    font-size: 1.8pc;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}

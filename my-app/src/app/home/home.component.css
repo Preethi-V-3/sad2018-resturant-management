@@ -1,0 +1,22 @@
+.home{
+    background-image: url("assets/images/home.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+    height: auto;
+    max-width: 100%;
+	background-position: center center;
+	position: relative;
+    font-style: oblique;
+    font-size:0.40in;
+    font-weight: bold;
+    align-items: center;
+    
+}
+.homewrapper{
+    font-family: serif;
+    text-align: center;
+    padding: 10pc;
+    color:#FFE57F;
+}

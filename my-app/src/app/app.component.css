@@ -1,31 +1,25 @@
-.background{
-    align-content: flex;
-    text-align:center;
-    /* background-image : url("favicon.ico"); */
-    background-size: cover;
-   background-position: center;
-}
-.app {
-    height: 25vh;
-}
 .text{
     text-align: left;
     color: brown;
 }
-.toolbar{
+.header{
     align-content:center;
+    background-color:black;
 }
 
-.toolbar-icon {
-    padding: 0 14px;
-  }
-  
-  .toolbar-row-spacer {
-    flex: 1 1 auto;
-  }
+footer{
+    background-color:black;
+}
 
+.content{
+    padding-top: 50px;
+    z-index: 1;
+    position: relative;
+}
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
+    z-index: 2;
+    height: 50px;
     position: fixed;
     top: 0;
     right: 0;
@@ -33,10 +27,18 @@
     left: 0;
 }
 
-    
 nav {
-    width: 100%  !important;
+    width: 100%;
     background-color:rgb(34, 34, 34);
+}
+
+nav a{
+    color:black!important;
+    font-weight:bold;
+    font-size:16px;
+    text-transform: uppercase;
+    background-color:transparent;
+    font-style: italic;
 }
 
 ul {
@@ -44,7 +46,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color:#FFD600;
 }
 
 li {
@@ -53,18 +55,122 @@ li {
 
 li a {
     display: block;
-    color: #ffffff;
+    color: black;
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
-    margin-left: 75px;
+    margin-left: 85px;
+    position: fixes;
+   
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #FFAB00;
 }
-
-li a:active {
+.copyright{
+    float: left;
     color: white;
-    background-color: green;
+    text-align: left;
+}
+.social {
+    float: right;
+    text-align: right;
+}
+  
+  .smGlobalBtn { 
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border:1px solid #ddd; 
+      box-shadow: 0 3px 3px #999;
+      padding: 0px;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 27px;
+      -moz-border-radius:27px;
+      -webkit-border-radius:27px;
+  }
+  
+  .facebookBtn{
+      background: #4060A5;
+  }
+  
+  .facebookBtn:before{ 
+      font-family: "FontAwesome";
+      content: "\f09a"; 
+  }
+  
+  .facebookBtn:hover{
+      color: #4060A5;
+      background: #fff;
+      border-color: #4060A5; 
+  }
+  
+  .twitterBtn{
+      background: #00ABE3;
+  }
+  
+  .twitterBtn:before{
+        font-family: "FontAwesome";
+        content: "\f099"; 
+        
+  }
+  
+  .twitterBtn:hover{
+        color: #00ABE3;
+        background: #fff;
+        border-color: #00ABE3;
+  }
+  
+  .googleplusBtn{
+      background: #e64522;
+  }
+  
+  .googleplusBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0d5"; 
+  }
+  
+  .googleplusBtn:hover{
+        color: #e64522;
+        background: #fff;
+        border-color: #e64522;
+  }
+  
+  .linkedinBtn{
+      background: #0094BC;
+  }
+  
+  .linkedinBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0e1"; 
+  }
+  
+  .linkedinBtn:hover{
+        color: #0094BC;
+        background: #fff;
+        border-color: #0094BC;
+  }
+
+  .spacer {
+  align-items: center;
+}
+.background{
+    background-image: url("assets/images/e.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+	background-position: center center;
+	position: relative;
+    align-items: center;
 }

@@ -1,47 +1,54 @@
-<div class="contact">
-  <div class="contactwrapper">
-    <h1>Contact Us</h1>
+<div>
+  <div class="contact">
+    <div class="contactwrapper">
+      <h1>Contact Us</h1>
+    </div>
   </div>
-</div>
-<h1 style="color:black;padding-right:0pc">Contact form</h1>
-<h2 style="color:black;padding-right:0pc">Do you have anything in your mind to tell us? Please don't hesitate to get in touch to us via our contact form.</h2>
-<br>
-<div class="infotext">
-  <label for="name" style="float:left">Full Name:</label>
-  <br>
-  <input type="text" name="name" placeholder="Enter your name" class="textbox" #name>
-  <br>
-  <br>
-  <label for="email" style="float:left">Email Address:</label>
-  <br>
-  <input type="email" name="email" placeholder="youremail@mail.com" class="textbox" #email>
-  <br>
-  <br>
-  <label style="float:left">Message:</label>
-  <br>
-  <textarea type="text" placeholder="write your message" name="message" class="messagetextbox" #message>
-    </textarea>
-  <br>
-  <br>
-  <button id="send" class="sendbtn" onclick="sendFunction(name.value, email.value, message.value)" type="submit">Send</button>
-</div>
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
-<div class="address">
-  <h1 style="font-family: Calibri;color:navy"> Rangolee Indian Cuisnie</h1>
-  <p>
-    <i class="fa fa-location-arrow" style="font-size:30px;color:green"> Frankfurt</i>
-  </p>
-  <p>
-    <i class="fa fa-phone" style="font-size:30px;color:green"> Phone:+123456</i>
-  </p>
-  <p>
-    <i class="fa fa-fax" style="font-size:30px;color:green">Fax:+0987665</i>
-  </p>
-  <p>
-    <i class="fa fa-envelope" style="font-size:30px;color:green"> E-mail:abc@gmail.com</i>
-  </p>
-  <br>
-  <br>
+
+  <div>
+    <h1 style="text-align:left; padding-top:4pc;font-family:Comic Sans MS">Rangolee authentic Indian cuisine</h1>
+    <i class="fa fa-home" style="font-size:30px;color:#01579B;float:left;">Frankfurt</i>
+    <br>
+    <br>
+    <i class="fa fa-phone" style="font-size:30px;color:#01579B;float:left">+491234567890</i>
+    <br>
+    <br>
+    <i class="fa fa-envelope" style="font-size:30px;color: #01579B;float:left">rangolee.de@abc.com</i>
+    <br>
+    <br>
+    <i class="fa fa-fax" style="font-size:30px;color:#01579B;float:left">123456</i>
+    <br>
+    <br>
+  </div>
+
+  <div>
+    <h1 style="padding-top:5pc">Contact Form </h1>
+    <h2>Do you have anything in your mind to tell us? Please don't hesitate to get in touch to us via our contact form.</h2>
+    <div class="infotext">
+      <label for="name" style="float:left">Full Name:</label>
+      <br>
+      <input type="text" name="name" placeholder="Enter your name" class="textbox">
+      <br>
+      <br>
+      <label for="email" style="float:left">Email Address:</label>
+      <br>
+      <input type="email" name="email" placeholder="youremail@mail.com" class="textbox">
+      <br>
+      <br>
+      <label style="float:left">Message:</label>
+      <br>
+      <textarea input type="text" placeholder="write your message" name="message" class="messagetextbox"></textarea>
+      <br>
+      <br>
+      <div class="sendbtnwrapper">
+        <button id="send" class="sendbtn" onclick="SendFunction">Send</button>
+        <br>
+        <br>
+      </div>
+
+    </div>
+  </div>
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
 </div>

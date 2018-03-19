@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
-import { TranslateModule } from 'ng2-translate/ng2-translate';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -36,8 +35,6 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { WINDOW_PROVIDERS } from './window.service';
-import { LoginComponent } from './login/login.component';
-
 
 @NgModule({
   declarations: [
@@ -47,8 +44,7 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     ContactusComponent,
     MenuComponent,
-    HomeComponent,
-    LoginComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -75,13 +71,11 @@ import { LoginComponent } from './login/login.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
     }),
-    TranslateModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule, // for authentication
-        AngularFireDatabaseModule, // for database
+    AngularFireDatabaseModule, // for database
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

@@ -1,33 +1,40 @@
 
 .tablereservation{
-  background-image: url("assets/images/reserved.jpg");
+  background-image: url("assets/images/reserve.jpg");
   background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+  height: auto;
+  max-width: 100%;
+	background-position: center center;
+	position: relative;
+  font-style: oblique;
+  font-size:0.40in;
+  font-weight: bold;
   align-items: center;
 
 }
 .tablewrapper{
   font-family: serif;
-  font-style: oblique;
-  font-size:0.48in;
-  font-weight: bold;
-  text-align: center;
-  padding: 10pc;
-  color:floralwhite;
+    text-align: center;
+    padding: 10pc;
+    color:#FFE57F;
 }
 .reservetable-card {
   width: 400px;
   height: 400px;
   align-items: center;
-
 }
 .textwrapper{
   width:300px; 
   height:25px; 
-  border: 2px solid black;
   padding: 0pc;
-  background-color: crimson;
+  background-color:#82B1FF;
+}
+.datepicker { 
+  position: relative;
+}
+.reservebtn{
+  background-color:peru;
 }

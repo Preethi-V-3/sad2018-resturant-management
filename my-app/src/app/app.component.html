@@ -1,40 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="background">
-  <section class="app">
-    <mat-toolbar class="toolbar" role="header">
-        <mat-toolbar-row>
-            <mat-icon class="toolbar-icon">delete</mat-icon>
-            <h1 class="text">Rangolee</h1>
-            <span class="toolbar-row-spacer"></span>
-            <button onclick="loginComponent()"> Login/Register </button>
-          </mat-toolbar-row>
-    </mat-toolbar>
-    <div [class.sticky]="navIsFixed">
-      <nav #navbar mat-tab-nav-bar>
-        <ul>
-          <li>
-            <a class="active" href="/home">Home</a>
-          </li>
-          <li>
-            <a href="/about">About us</a>
-          </li>
-          <li>
-            <a href="/menu">Menu</a>
-          </li>
-          <li>
-            <a href="/orderonline">Online Order</a>
-          </li>
-          <li>
-            <a href="/reservetable">ReserveNow</a>
-          </li>
-          <li>
-            <a href="/contactus">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-  <router-outlet></router-outlet>
+  <mat-toolbar class="header" role="header">
+    <span>
+      <h1 class="text">Rangolee</h1>
+    </span>
+  </mat-toolbar>
+  <div [class.sticky]="navIsFixed">
+    <nav #navbar mat-tab-nav-bar>
+      <ul>
+        <li>
+          <a class="active" href="/home">Home</a>
+        </li>
+        <li>
+          <a href="/about">About us</a>
+        </li>
+        <li>
+          <a href="/menu">Menu</a>
+        </li>
+        <li>
+          <a href="/orderonline">Online Order</a>
+        </li>
+        <li>
+          <a href="/reservetable">ReserveNow</a>
+        </li>
+        <li>
+          <a href="/contactus">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div [class.content]="navIsFixed">
+    <!-- routing here -->
+    <router-outlet></router-outlet>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <footer>
+      <div>
+        <h3 class="copyright">© Copyright Rangolee authentic Indian cuisine.</h3>
+        <div class="social">
+          <h3 style="color:white">Follow us at
+            <a class="facebookBtn smGlobalBtn" href="#"></a>
+            <a class="twitterBtn smGlobalBtn" href="#"></a>
+            <a class="googleplusBtn smGlobalBtn" href="#"></a>
+            <a class="linkedinBtn smGlobalBtn" href="#"></a>
+          </h3>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
 <h1>Information Request</h1>
 <form [formGroup]="form" (ngSubmit)="sendEmail()">

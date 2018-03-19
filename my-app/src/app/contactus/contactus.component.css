@@ -1,16 +1,18 @@
 agm-map {
     
-    position: absolute;top:77pc; left:0; width:100%; height:300px;
+    position: absolute;top:44pc; right:3pc; width:30pc; height:300px;
+    float:left;
 
   }
-
+ 
   .contact{
-    background-image: url("assets/images/reserved.jpg");
+    background-image: url("assets/images/contact.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
-	height: 100%;
+	width: auto;
+    height: auto;
+    max-width: 100%;
 	background-position: center center;
 	position: relative;
     font-style: oblique;
@@ -23,21 +25,13 @@ agm-map {
     font-family: serif;
     text-align: center;
     padding: 10pc;
-    color:floralwhite;
-}
-.address{
-   
-    font-family:cursive;
-    color:firebrick;
-    float: right;
-    position: absolute;top:800px; right:100px; width:400px; height:300px;
-
-
+    color:#FFE57F;
 }
 .infotext{
     font-weight:bold;
     font-size: 0.3in;
    padding-right:70%;
+   
 }
 
 .textbox{
@@ -61,21 +55,10 @@ agm-map {
 .sendbtn{
     height:1cm;
     width:3cm;
-   
     color:navy;
     float: left;
 }
-.reservetable-card {
-    width: 400px;
-    height: 400px;
-    align-items: center;
-    margin-left: 150%;
+.sendbtnwrapper{
+    padding-top: 5pc;
+}
   
-  }
-  .textwrapper{
-    width:300px; 
-    height:25px; 
-    border: 2px solid black;
-    padding: 0pc;
-    background-color:maroon;
-  }

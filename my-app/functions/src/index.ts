@@ -52,7 +52,7 @@ function parseBody(body) {
       });  
   });
 
-//nodemailer code
+//nodemailer code run npm install nodemailer
 /* const nodemailer = require('nodemailer');
 const gmailEmail = encodeURIComponent(functions.config().gmail.email);
 const gmailPassword = encodeURIComponent(functions.config().gmail.password);
