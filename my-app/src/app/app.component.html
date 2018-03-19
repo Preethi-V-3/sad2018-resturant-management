@@ -1,7 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="back">
 <div class="background">
-  <mat-toolbar class="toolbar">
+  <mat-toolbar class="header" role="header">
     <span>
       <h1 class="text">Rangolee</h1>
     </span>
@@ -9,8 +8,10 @@
     
  
   </mat-toolbar>
-  <nav class="navbar" mat-tab-nav-bar>
+  <div [class.sticky]="navIsFixed">
+    <nav #navbar mat-tab-nav-bar>
       <ul>
+<<<<<<< HEAD
           <li><a class="active" href="/home" translate>Home</a></li>
           <li><a href="/about">About us</a></li>
           <li><a href="/menu">Menu</a></li>
@@ -23,20 +24,79 @@
     <div>
       <!-- routing here -->      
       <router-outlet></router-outlet>
+=======
+        <li>
+          <a class="active" href="/home">Home</a>
+        </li>
+        <li>
+          <a href="/about">About us</a>
+        </li>
+        <li>
+          <a href="/menu">Menu</a>
+        </li>
+        <li>
+          <a href="/orderonline">Online Order</a>
+        </li>
+        <li>
+          <a href="/reservetable">ReserveNow</a>
+        </li>
+        <li>
+          <a href="/contactus">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div [class.content]="navIsFixed">
+    <!-- routing here -->
+    <router-outlet></router-outlet>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <footer>
+      <div>
+        <h3 class="copyright">© Copyright Rangolee authentic Indian cuisine.</h3>
+        <div class="social">
+          <h3 style="color:white">Follow us at
+            <a class="facebookBtn smGlobalBtn" href="#"></a>
+            <a class="twitterBtn smGlobalBtn" href="#"></a>
+            <a class="googleplusBtn smGlobalBtn" href="#"></a>
+            <a class="linkedinBtn smGlobalBtn" href="#"></a>
+          </h3>
+        </div>
+      </div>
+    </footer>
+>>>>>>> 1717190316e373b716efa1a88b831967fc87d803
   </div>
 </div>
-<br>
-<br>
-<br>
-<mat-toolbar class="toolbar">
-    <h3 style="color:white; text-align:center">© Copyright Rangolee authentic Indian cuisine.</h3>
-  <div id="social">
-      <h3 style="color:white">Follow us at
-      <a class="facebookBtn smGlobalBtn" href="#" ></a>
-      <a class="twitterBtn smGlobalBtn" href="#" ></a>
-      <a class="googleplusBtn smGlobalBtn" href="#" ></a>
-      <a class="linkedinBtn smGlobalBtn" href="#" ></a>
-    </h3>
+<h1>Information Request</h1>
+<form [formGroup]="form" (ngSubmit)="sendEmail()">
+  <input type="text" placeholder="Name" formControlName="name">
+  <input type="text" placeholder="Email" formControlName="email">
+  <textarea placeholder="Message" formControlName="message">
+  </textarea>
+  <button type="submit" [disabled]="form.invalid">Submit</button></form>
+<!-- <div class="container-fluid">
+    
+    <div style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="item">Item</label> <input type="text"
+            class="form-control" placeholder="Enter content..." id="item"
+            required [(ngModel)]="itemValue" name="item">
+        </div>
+   
+        <div class="btn-group">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
     </div>
-</mat-toolbar>
-</div>   
+   
+    <h2>Content from Firebase</h2>
+    <div class="col-md-3">
+      <pre *ngFor="let item of items | async">
+              {{ item.component }}
+      </pre>
+    </div>
+  </div> -->

@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import {
@@ -25,7 +25,7 @@ import {
 } from '@angular/material';
 
 import { routing } from './app.routing';
-
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { OrderonlineComponent } from './orderonline/orderonline.component';
 import { ReservetableComponent } from './reservetable/reservetable.component';
@@ -34,7 +34,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import {LoginComponent} from './loginpage/loginpage.component';
-
+import { WINDOW_PROVIDERS } from './window.service';
 
 @NgModule({
   declarations: [
@@ -51,6 +51,7 @@ import {LoginComponent} from './loginpage/loginpage.component';
     BrowserModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     routing,
     BrowserAnimationsModule,
     MatMenuModule,
@@ -69,9 +70,12 @@ import {LoginComponent} from './loginpage/loginpage.component';
     MatSelectModule,
     MatNativeDateModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule, // for authentication
+    AngularFireDatabaseModule, // for database
   ],
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
