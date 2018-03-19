@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="jumbotron col-md-6 col-md-offset-3" style="padding-top: 0; padding-bottom: 0;">
+		<h2>Welcome to Login Page</h2>
+	</div>
+	<h1 *ngIf="user | async">Welcome {{ (user | async)?.email }}!</h1>
+
+<div *ngIf="!(user | async)">
+  <input type="text" [(ngModel)]="email" placeholder="email">
+  <input type="password" [(ngModel)]="password" placeholder="password">
+  
+
+  
+  <button (click)="signup()" [disabled]="!email || !password">
+	Signup
+  </button>
+
+  <button (click)="loginWithEmail()" [disabled]="!email || !password">
+    Login
+  </button>
+</div>
+
+<button (click)="logout()" *ngIf="user | async">
+  Logout
+</button>
+</div>
+
+

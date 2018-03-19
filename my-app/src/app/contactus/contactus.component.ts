@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./contactus.component.css'],
 })
 export class ContactusComponent {
-  lat: number = 50.1109;
-  lng: number = 8.6821;
+ 
 }
 

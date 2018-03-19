@@ -3,8 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AgmCoreModule } from '@agm/core';
-
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import {
   MatMenuModule,
@@ -32,6 +33,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import {LoginComponent} from './loginpage/loginpage.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { HomeComponent } from './home/home.component';
     ReservetableComponent,
     AboutComponent,
     ContactusComponent,
+    LoginComponent,
     MenuComponent,
     HomeComponent
   ],
@@ -65,9 +68,8 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatSelectModule,
     MatNativeDateModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
-    })
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
