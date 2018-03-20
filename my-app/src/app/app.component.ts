@@ -42,6 +42,13 @@ export class AppComponent implements OnInit {
    this.itemValue = '';
 } */
 
+onlogin(){
+
+  this.router.navigateByUrl('/loginpage');
+
+}
+//user: FirebaseListObservable<any[]>;
+
   @HostListener('window:scroll', ['$event'])
   handleScrollEvent(e) {
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position

@@ -29,7 +29,7 @@ export class ContactusComponent {
 
     let url = `https://us-central1-resturant-management-app.cloudfunctions.net/httpEmailSendGrid`
     let params: URLSearchParams = new URLSearchParams();
-    //let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+    let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
   
     params.set('to', this.form.value.email);
     params.set('from', 'admin@rangolee.de');

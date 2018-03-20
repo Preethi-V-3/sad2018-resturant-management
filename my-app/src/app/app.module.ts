@@ -34,6 +34,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import {LoginComponent} from './loginpage/loginpage.component';
 import { WINDOW_PROVIDERS } from './window.service';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { WINDOW_PROVIDERS } from './window.service';
     ReservetableComponent,
     AboutComponent,
     ContactusComponent,
+    LoginComponent,
     MenuComponent,
     HomeComponent
   ],
