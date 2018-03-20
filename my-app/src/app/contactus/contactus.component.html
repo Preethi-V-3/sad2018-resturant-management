@@ -4,24 +4,23 @@
     </div>
 </div>
 
-<div>
-    <h1 style="text-align:left; padding-top:4pc;font-family:Comic Sans MS">Rangolee authentic Indian cuisine</h1>
-    <i class="fa fa-home" style="font-size:30px;color:#01579B;float:left;">Frankfurt</i><br><br>
-    <i class="fa fa-phone" style="font-size:30px;color:#01579B;float:left">+491234567890</i><br><br>
-    <i class="fa fa-envelope" style="font-size:30px;color: #01579B;float:left">rangolee.de@abc.com</i><br><br>
-    <i class="fa fa-fax" style="font-size:30px;color:#01579B;float:left">123456</i><br><br>
-  </div>
+<div class="address">
+    <h1 style="text-align:left; padding-top:4pc;font-family:Comic Sans MS; font-style: italic;">Rangolee authentic Indian cuisine</h1>
+    <i class="fa fa-home" style="font-size:30px;color:#01579B;float:left; font-style: italic;">Preungesheimer Str. 1, 60389 Frankfurt am Main</i><br><br>
+    <i class="fa fa-phone" style="font-size:30px;color:#01579B;float:left; font-style: italic;">+49-69-272-422-00 / +49-69-272-422-23 </i><br><br>
+    <i class="fa fa-envelope" style="font-size:30px;color: #01579B;float:left; font-style: italic;">info@rangolee.de</i><br><br>
+</div>
 
 <div>
-<h1 style="padding-top:5pc">Contact Form </h1>
-<h2>Do you have anything in your mind to tell us?
-    Please don't hesitate to get in touch to us via our contact form.</h2>
+<h1 style="padding-top:5pc; font-style: italic; text-decoration: underline;">Contact Form </h1>
+<h2 style=" font-style: italic;">Do you have anything in your mind to tell us?
+    Please don't hesitate to get in touch with us via our contact form.</h2>
     <div class="infotext">
-        <label for="name" style="float:left" >Full Name:</label><br>
+        <label for="name" style="float:left;" >Full Name:</label><br>
         <input type="text" name="name" placeholder="Enter your name" class= "textbox" ><br><br>
-        <label for="email"  style="float:left"  >Email Address:</label><br>
+        <label for="email"  style="float:left; font-style: italic;"  >Email Address:</label><br>
         <input type="email" name="email" placeholder="youremail@mail.com" class= "textbox" ><br><br>
-        <label style="float:left" >Message:</label><br>     
+        <label style="float:left ; font-style: italic;" >Message:</label><br>     
         <textarea input type="text" placeholder="write your message" name="message" class="messagetextbox"></textarea>
         <br>
         <br>
@@ -29,7 +28,11 @@
        
     </div>
 </div>    
-<agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+<iframe
+  width="400"
+  height="300px"
+  frameborder="0" style="position:absolute;top:44pc;right:3pc"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXW6k2TegoELdky-4Q7ONw5xWebJeDJKE
+    &q=Preungesheimer+Str 1,Frankfurt+Germany" allowfullscreen>
+</iframe>
 

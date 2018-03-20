@@ -3,8 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AgmCoreModule } from '@agm/core';
-
 
 import {
   MatMenuModule,
@@ -65,9 +63,6 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatSelectModule,
     MatNativeDateModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
-    })
   ],
   providers: [],
   bootstrap: [AppComponent]

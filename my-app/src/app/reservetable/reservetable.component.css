@@ -25,16 +25,22 @@
   width: 400px;
   height: 400px;
   align-items: center;
+  font-style: italic;
 }
 .textwrapper{
   width:300px; 
   height:25px; 
   padding: 0pc;
-  background-color:#82B1FF;
+  background-color:#8D6E63;
+  font-style: italic;
 }
 .datepicker { 
   position: relative;
 }
 .reservebtn{
-  background-color:peru;
+  background-color:#8D6E63;
+  font-style: italic;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
 }
