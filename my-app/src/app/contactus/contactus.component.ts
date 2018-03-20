@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Http, RequestOptions, Response, URLSearchParams } from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
@@ -8,37 +9,44 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./contactus.component.css'],
 })
 export class ContactusComponent {
-  lat: number = 50.1109;
-  lng: number = 8.6821;
 
-  // form: FormGroup;
-  constructor(/* private fb: FormBuilder,  */private db: AngularFireDatabase) {
+  form: FormGroup;
+  constructor(private fb: FormBuilder, private db: AngularFireDatabase, private http: Http) {
   }
 
   ngOnInit() {
-    // this.createForm();
+    this.createForm();
   }
 
-  /* createForm() {
+  createForm() {
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
       message: ['', Validators.required],
     });
-  } */
-  sendFunction(name, email, message) {
+  }
+  sendEmail() {
 
-    console.log(name, email, message);
-    // const {name, email, message} = this.form.value;
-    const date = Date();
-    const html = `
-      <div>From: ${name}</div>
-      <div>Email: <a href="mailto:${email}">${email}</a></div>
-      <div>Date: ${date}</div>
-      <div>Message: ${message}</div>
-    `;
-    let formRequest = { name, email, message, date, html };
-    this.db.list('/messages').push(formRequest);
+    let url = `https://us-central1-resturant-management-app.cloudfunctions.net/httpEmailSendGrid`
+    let params: URLSearchParams = new URLSearchParams();
+    //let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+  
+    params.set('to', this.form.value.email);
+    params.set('from', 'admin@rangolee.de');
+    params.set('subject', 'Thanks for contacting Us!');
+    params.set('content', 'Thanks for your message. We value your thoughts. \nBest Regards,\nRangolee Team');
+  
+    this.form.reset;
+  
+    return this.http.post(url, params)
+      .toPromise()
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      });
+  
   }
 }
 

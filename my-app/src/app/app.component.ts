@@ -4,8 +4,6 @@ import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW } from './window.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Http, RequestOptions, Response, URLSearchParams } from '@angular/http';
 import { environment } from '../environments/environment';
 
 @Component({
@@ -18,52 +16,14 @@ export class AppComponent implements OnInit {
   navIsFixed: boolean = false;
   //itemValue = '';
   //items: Observable<any[]>;
-  form: FormGroup;
 
-  constructor(private router: Router, public db: AngularFireDatabase, private fb: FormBuilder,
-    @Inject(DOCUMENT) private document: Document, @Inject(WINDOW) private window: Window, private http: Http) {
+  constructor(private router: Router, private db: AngularFireDatabase,
+    @Inject(DOCUMENT) private document: Document, @Inject(WINDOW) private window: Window) {
     //this.items = db.list('items').valueChanges();
   }
 
   ngOnInit(): void {
-    this.createForm();
   }
-
-  createForm() {
-    this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      message: ['', Validators.required],
-    });
-  }
- /* onSubmit() {
-   this.db.list('/items').push({ content: this.itemValue });
-   this.itemValue = '';
- }  */
-
-sendEmail() {
-
-  let url = `https://us-central1-resturant-management-app.cloudfunctions.net/httpEmailSendGrid`
-  let params: URLSearchParams = new URLSearchParams();
-  //let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
-
-  params.set('to', this.form.value.email);
-  params.set('from', 'admin@rangolee.de');
-  params.set('subject', 'Thanks for contacting Us!');
-  params.set('content', 'Thanks for your message. We value your thoughts. \nBest Regards,\nRangolee Team');
-
-  this.form.reset;
-
-  return this.http.post(url, params)
-    .toPromise()
-    .then(res => {
-      console.log(res)
-    })
-    .catch(err => {
-      console.log(err)
-    });
-
-}
 
 /* onSubmit() {
   const { name, email, message } = this.form.value;
@@ -77,6 +37,9 @@ sendEmail() {
   let formRequest = { name, email, message, date, html };
   this.db.list('/messages').push(formRequest);
   this.form.reset();
+
+  this.db.list('/items').push({ content: this.itemValue });
+   this.itemValue = '';
 } */
 
   @HostListener('window:scroll', ['$event'])

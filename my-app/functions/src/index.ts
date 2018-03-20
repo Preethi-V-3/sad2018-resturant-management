@@ -13,7 +13,7 @@ const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
 const sendgrid = require('sendgrid');
-const client = sendgrid('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');
+const client = sendgrid('enter the api key here');
 
 function parseBody(body) {
     const helper = sendgrid.mail;

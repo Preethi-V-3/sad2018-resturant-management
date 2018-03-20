@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AgmCoreModule } from '@agm/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -68,9 +68,7 @@ import { WINDOW_PROVIDERS } from './window.service';
     MatToolbarModule,
     MatSelectModule,
     MatNativeDateModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCOUtsnB0yGW5dZWjayyiToVbAD7XVVBxk'
-    }),
+    HttpModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule, // for authentication
     AngularFireDatabaseModule, // for database

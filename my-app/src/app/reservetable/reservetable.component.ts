@@ -15,5 +15,6 @@ export class ReservetableComponent implements OnInit {
   ngOnInit() {
   }
   date:any;
+  time:any;
   minDate = new Date();
 }
