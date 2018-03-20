@@ -1,6 +1,6 @@
-
-<div class="tablereservation">
-  <div class="tablewrapper">
+<div>
+  <div class="tablereservation">
+    <div class="tablewrapper">
       <h1>Reserve Table</h1>
     </div>
 </div>  
@@ -19,10 +19,9 @@
         </div>  -->
         <input matInput [(ngModel)]="date" type="date" name="date"  class="textwrapper"/><br><br>
         <input matInput placeholder="No of Persons" type="number" name="person" min="0" class="textwrapper"><br><br>
-        <input matInput [(ngModel)]="time" type="time"  class="textwrapper"/><br><br> 
+        <input matInput type="time"  class="textwrapper"/><br><br> 
         <button mat-raised-button ng-click="EmailNotification()" type="submit" class="reservebtn">Reserve Now</button>
-  </mat-card-content>
-  </mat-card>  
-
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
-

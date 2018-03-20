@@ -1,38 +1,77 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="back">
 <div class="background">
-  <mat-toolbar class="toolbar">
+  <mat-toolbar class="header" role="header">
     <span>
       <h1 class="text">Rangolee</h1>
     </span>
+    <button (click)='onlogin()' style ="margin-left: 70pc;"> Login </button>
+    
+ 
   </mat-toolbar>
-  <nav class="navbar" mat-tab-nav-bar>
+  <div [class.sticky]="navIsFixed">
+    <nav #navbar mat-tab-nav-bar>
       <ul>
-          <li><a class="active" href="/home" translate>Home</a></li>
-          <li><a href="/about">About us</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/orderonline">Online Order</a></li>
-          <li><a href="/reservetable">Reserve Table</a></li>
-          <li><a href="/contactus">Contact</a></li>
-        </ul>
-  </nav> 
-    <div>
-      <!-- routing here -->      
-      <router-outlet></router-outlet>
+        <li>
+          <a class="active" href="/home">Home</a>
+        </li>
+        <li>
+          <a href="/about">About us</a>
+        </li>
+        <li>
+          <a href="/menu">Menu</a>
+        </li>
+        <li>
+          <a href="/reservetable">ReserveNow</a>
+        </li>
+        <li>
+          <a href="/contactus">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div [class.content]="navIsFixed">
+    <!-- routing here -->
+    <router-outlet></router-outlet>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <footer id="footer">
+      <div id="copyright">
+        <h3>© Copyright Rangolee authentic Indian cuisine.</h3>
+      </div>
+      <div id="social">
+        <h3 style="color:white">Follow us at
+          <a class="facebookBtn smGlobalBtn" href="#"></a>
+          <a class="twitterBtn smGlobalBtn" href="#"></a>
+          <a class="googleplusBtn smGlobalBtn" href="#"></a>
+          <a class="linkedinBtn smGlobalBtn" href="#"></a>
+        </h3>
+      </div>
+    </footer>
   </div>
 </div>
-<br>
-<br>
-<br>
-<mat-toolbar class="toolbar">
-    <h3 style="color:white; text-align:center">© Copyright Rangolee authentic Indian cuisine.</h3>
-  <div id="social">
-      <h3 style="color:white">Follow us at
-      <a class="facebookBtn smGlobalBtn" href="#" ></a>
-      <a class="twitterBtn smGlobalBtn" href="#" ></a>
-      <a class="googleplusBtn smGlobalBtn" href="#" ></a>
-      <a class="linkedinBtn smGlobalBtn" href="#" ></a>
-    </h3>
+<!-- <div class="container-fluid">
+    
+    <div style="width: 300px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="item">Item</label> <input type="text"
+            class="form-control" placeholder="Enter content..." id="item"
+            required [(ngModel)]="itemValue" name="item">
+        </div>
+   
+        <div class="btn-group">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
     </div>
-</mat-toolbar>
-</div>   
+   
+    <h2>Content from Firebase</h2>
+    <div class="col-md-3">
+      <pre *ngFor="let item of items | async">
+              {{ item.component }}
+      </pre>
+    </div>
+  </div> -->

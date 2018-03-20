@@ -1,11 +1,15 @@
 # SAD2018-Restaurant-Management
 Delicious Food point.
-"# commit from ashwini" 
-"# commit from ashwini patil" 
-"# commit from sameeksha" 
-"commit from annie" 
-"commit from annie" 
+Rangolee.de - Authentic Indian Cuisine Restaurant
 
-
-![screen shot 2018-03-09 at 14 08 25](https://user-images.githubusercontent.com/36844468/37209159-714fb0d2-23a4-11e8-8ded-535274a7637d.png)
-![screen shot 2018-03-09 at 14 08 33](https://user-images.githubusercontent.com/36844468/37209162-7222c288-23a4-11e8-94e8-264c03198bc4.png)
+Follow the below steps to configure this project:
+1. Install angular-cli using https://angular.io/guide/quickstart and follow the steps in it.
+2. Install all the below packages in the project folder:
+    npm install --save firebase angularfire2 //to use firebase database functionality
+    npm install --save @angular/material @angular/cdk //to use angular material components
+    npm install --save classlist.js
+    npm install -g firebase-tools //to use firebase hosting and functions - follow the steps mentioned in the link to setup project in firebase and link it with the app https://firebase.google.com/
+    * firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password="secretpassword" to use functions
+3. After installing firebase tools traverse to functions directory and run *npm install --save sendgrid* to use sendgrid in firebase    functions. Sendgrid is used to send emails to user and admin from contactus and reservenow forms.
+4. *firebase deploy* command is used to deploy the functions and hosting in firebase.
+5. *ng serve* cmd is used to run application in localhost

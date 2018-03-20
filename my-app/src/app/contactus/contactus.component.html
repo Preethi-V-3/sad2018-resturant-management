@@ -1,8 +1,9 @@
-<div class="contact">
-  <div class="contactwrapper">
+<div>
+  <div class="contact">
+    <div class="contactwrapper">
       <h1>Contact Us</h1>
     </div>
-</div>
+  </div>
 
 <div class="address">
     <h1 style="text-align:left; padding-top:4pc;font-family:Comic Sans MS; font-style: italic;">Rangolee authentic Indian cuisine</h1>
@@ -12,26 +13,39 @@
 </div>
 
 <div>
-<h1 style="padding-top:5pc; font-style: italic; text-decoration: underline;">Contact Form </h1>
-<h2 style=" font-style: italic;">Do you have anything in your mind to tell us?
+<h1 style="padding-top:5pc; font-style: italic; text-decoration: underline; text-align:center">Contact Form </h1>
+<h2 style=" font-style: italic;text-align:center">Do you have anything in your mind to tell us?
     Please don't hesitate to get in touch with us via our contact form.</h2>
     <div class="infotext">
-        <label for="name" style="float:left;" >Full Name:</label><br>
-        <input type="text" name="name" placeholder="Enter your name" class= "textbox" ><br><br>
-        <label for="email"  style="float:left; font-style: italic;"  >Email Address:</label><br>
-        <input type="email" name="email" placeholder="youremail@mail.com" class= "textbox" ><br><br>
-        <label style="float:left ; font-style: italic;" >Message:</label><br>     
-        <textarea input type="text" placeholder="write your message" name="message" class="messagetextbox"></textarea>
+      <form [formGroup]="form" (ngSubmit)="sendEmail()">
+        <label for="name" style="float:left">Full Name:</label>
+        <br>
+        <input type="text" name="name" placeholder="Enter your name" class="textbox" formControlName="name">
         <br>
         <br>
-        <div class="sendbtnwrapper"> <button id="send" class="sendbtn" onclick="SendFunction" >Send</button><br><br></div>
-       
+        <label for="email" style="float:left">Email Address:</label>
+        <br>
+        <input type="email" name="email" placeholder="youremail@mail.com" class="textbox" formControlName="email">
+        <br>
+        <br>
+        <label style="float:left">Message:</label>
+        <br>
+        <textarea input type="text" placeholder="write your message" name="message" class="messagetextbox" formControlName="message"></textarea>
+        <br>
+        <br>
+        <div class="sendbtnwrapper">
+          <button id="send" class="sendbtn" type="submit" [disabled]="form.invalid">Send</button>
+          <br>
+          <br>
+        </div>
+      </form>
     </div>
+</div>
 </div>    
 <iframe
   width="400"
   height="300px"
-  frameborder="0" style="position:absolute;top:44pc;right:3pc"
+  frameborder="0" style="position:absolute;top:40pc;right:3pc"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXW6k2TegoELdky-4Q7ONw5xWebJeDJKE
     &q=Preungesheimer+Str 1,Frankfurt+Germany" allowfullscreen>
 </iframe>

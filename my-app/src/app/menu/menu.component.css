@@ -1,5 +1,5 @@
 
-.back{
+.menu{
     background-image: url("assets/images/menu.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     font-weight: bold;
     align-items: center;
 }
-.menu{
+.menuwrapper{
     font-family: serif;
     text-align: center;
     padding: 10pc;
