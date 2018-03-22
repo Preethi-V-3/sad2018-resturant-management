@@ -3,24 +3,33 @@
     <div class="tablewrapper">
       <h1>Reserve Table</h1>
     </div>
-</div>  
-<div>
-  <h1 align="center" style=" font-style: italic;text-decoration: underline;">Reservation</h1></div> 
+  </div>
+  <div>
+    <h1 align="center" style=" font-style: italic;text-decoration: underline;">Reservation</h1>
+  </div>
   <div align="center">
-  <mat-card class="reservetable-card">
-  <mat-card-header>
-      <h1 align="center">Make a Reservation for any occasion</h1>
-  </mat-card-header>
-  <mat-card-content>
-      <!-- <div class="datepicker">
+    <mat-card class="reservetable-card">
+      <mat-card-header>
+        <h1 align="center">Make a Reservation for any occasion</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- <div class="datepicker">
           <input matInput [min]="minDate" [matDatepicker]="picker" popup-placement="auto bottom-right" placeholder="Choose a date" [value]="date.value">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker touchUi="true" #picker></mat-datepicker>
         </div>  -->
-        <input matInput [(ngModel)]="date" type="date" name="date"  class="textwrapper"/><br><br>
-        <input matInput placeholder="No of Persons" type="number" name="person" min="0" class="textwrapper"><br><br>
-        <input matInput type="time"  class="textwrapper"/><br><br> 
-        <button mat-raised-button ng-click="EmailNotification()" type="submit" class="reservebtn">Reserve Now</button>
+        <form [formGroup]="form" (ngSubmit)="sendEmail()">
+          <input matInput type="date" name="date" class="textwrapper" formControlName="date"/>
+          <br>
+          <br>
+          <input matInput placeholder="No of Persons" type="number" name="person" min="0" class="textwrapper" formControlName="person">
+          <br>
+          <br>
+          <input matInput type="time" class="textwrapper" formControlName="time"/>
+          <br>
+          <br>
+          <button mat-raised-button type="submit" class="reservebtn">Reserve Now</button>
+        </form>
       </mat-card-content>
     </mat-card>
   </div>

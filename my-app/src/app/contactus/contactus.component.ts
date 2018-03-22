@@ -36,8 +36,8 @@ export class ContactusComponent {
     params.set('subject', 'Thanks for contacting Us!');
     params.set('content', 'Thanks for your message. We value your thoughts. \nBest Regards,\nRangolee Team');
   
-    this.form.reset;
-  
+    this.sendContactMessage();
+
     return this.http.post(url, params)
       .toPromise()
       .then(res => {
@@ -48,5 +48,19 @@ export class ContactusComponent {
       });
   
   }
-}
 
+  sendContactMessage() {
+    const { name, email, message } = this.form.value;
+    const subject = `Information Request from ${email}`;
+    const date = Date();
+    const html = `
+      <div>From: ${name}</div>
+      <div>Subject: ${subject}</div>
+      <div>Date: ${date}</div>
+      <div>Message: ${message}</div>
+    `;
+    let formRequest = { name, email, message, date, html };
+    this.db.list('/contactformmessages').push(formRequest);
+    this.form.reset();
+  }
+}

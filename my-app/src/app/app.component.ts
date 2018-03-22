@@ -2,7 +2,6 @@ import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW } from './window.service';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../environments/environment';
 
@@ -15,11 +14,10 @@ export class AppComponent implements OnInit {
 
   navIsFixed: boolean = false;
   //itemValue = '';
-  //items: Observable<any[]>;
+  items: Observable<any[]>;
 
-  constructor(private router: Router, private db: AngularFireDatabase,
+  constructor(private router: Router,
     @Inject(DOCUMENT) private document: Document, @Inject(WINDOW) private window: Window) {
-    //this.items = db.list('items').valueChanges();
   }
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//import { OrderonlineComponent } from './orderonline/orderonline.component'; //import orderonline components
+import { OrderonlineComponent } from './orderonline/orderonline.component'; //import orderonline components
 import { ReservetableComponent } from './reservetable/reservetable.component'; //import reservetable components
 import { HomeComponent } from './home/home.component'; //import home components
 import { AboutComponent } from './about/about.component'; //import reservetable components
@@ -11,7 +11,7 @@ import {LoginComponent} from './loginpage/loginpage.component';
 
 
 const appRoutes: Routes = [
- // { path: 'orderonline', component: OrderonlineComponent },
+  { path: 'orderonline', component: OrderonlineComponent },
 { path: 'home', component: HomeComponent },
 { path: 'loginpage', component: LoginComponent },
 { path: 'about', component: AboutComponent },

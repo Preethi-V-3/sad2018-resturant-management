@@ -10,44 +10,73 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LoginComponent implements OnInit {
 
-    email: string;
+  email: string;
   password: string;
+  user: Observable<firebase.User>;
 
-    user: Observable<firebase.User>;
-        
-    constructor(public afAuth: AngularFireAuth, private router : Router) {
-        this.user = afAuth.authState;
-        this.afAuth.authState.subscribe(auth => { 
-            if(auth) {
-              //this.router.navigateByUrl('/home');
-            }
-          });
-    }
-    loginWithEmail() {
-        this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password).then(value => {
-            console.log("User Login Successful");
-            this.router.navigate(['/home']);
-		
-		}).catch(err => {
-            console.log('Something went wrong:',err.message);
-        });
-        this.email = this.password = '';
-    }
-    
-    loginGoogle() {
-      this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
-            (success) => {
-                console.log('User Successfully Created', success);
-            this.router.navigate(['/home']);
-          }).catch(
-            (err) => {
-                console.log('Something went wrong:',err.message);
-          })
+  constructor(public afAuth: AngularFireAuth, private router: Router) {
+    this.user = afAuth.authState;
+    this.afAuth.authState.subscribe(auth => {
+      if (auth) {
+        //this.router.navigateByUrl('/home');
       }
+    });
     
-    logout() {
-      this.afAuth.auth.signOut();
+
+    //var menu = db.database.ref('menu_details');
+    //menu.on('value', this.gotData, this.errData);
+
+  }
+
+ 
+  /* gotData(data) {
+    var menuDetails = data.val();
+    var subMenuHeadings = Object.keys(menuDetails);
+
+    for (var i = 0; i < subMenuHeadings.length; i++) {
+
+      var subMenu = firebase.database().ref('menu_details/' + subMenuHeadings[i]).on('value', function (itemsnapshot) {
+
+        var subMenuDetails = itemsnapshot.val();
+        var itemIds = Object.keys(subMenuDetails);
+
+        for (var i = 0; i < itemIds.length; i++) {
+          var key = itemIds[i];
+          var itemDetails = subMenuDetails[key].item_name + " : " + subMenuDetails[key].item_price;
+          console.log("itemDetails", itemDetails);
+        }
+      });
     }
+  }
+  errData(err) {
+    console.log(err);
+  } */
+  
+  loginWithEmail() {
+    this.afAuth.auth.signInWithEmailAndPassword(this.email, this.password).then(value => {
+      console.log("User Login Successful");
+      this.router.navigate(['/home']);
+
+    }).catch(err => {
+      console.log('Something went wrong:', err.message);
+    });
+    this.email = this.password = '';
+  }
+
+  loginGoogle() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
+      (success) => {
+        console.log('User Successfully Created', success);
+        this.router.navigate(['/home']);
+      }).catch(
+        (err) => {
+          console.log('Something went wrong:', err.message);
+        })
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
   ngOnInit() {
   }
 
@@ -58,11 +87,11 @@ export class LoginComponent implements OnInit {
       .then(value => {
         console.log('User Successfully Created', value);
         this.router.navigateByUrl('/home');
-        
+
       })
       .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });    
-      this.email = this.password = '';
+        console.log('Something went wrong:', err.message);
+      });
+    this.email = this.password = '';
   }
 }

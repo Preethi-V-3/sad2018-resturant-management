@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule  } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import {

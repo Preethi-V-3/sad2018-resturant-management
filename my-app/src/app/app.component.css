@@ -160,12 +160,13 @@ li a:hover {
 	position: relative;
     align-items: center;
 }
-#footer {
-    height: 50px;
+   #footer {
+    height: 70px;
+    width:100%;
+    align-items: center;
     background: black;
-    }
-    
-    
+    text-align: center;
+}
     #copyright{
     color: white;
     margin-left:2%;

@@ -5,7 +5,7 @@
     </div>
   </div>
   
-      <img src="assets/images/menu1.jpg" style="width:40%;height:40%;padding:60px">
+      <!-- <img src="assets/images/menu1.jpg" style="width:40%;height:40%;padding:60px">
       
       <img src="assets/images/menu2.jpg" style="width:40%;height:40%;padding:60px">
       
@@ -15,6 +15,30 @@
 
       <img src="assets/images/menu5.jpg" style="width:40%;height:40%;padding:60px">
 
-      <img src="assets/images/menu6.jpg" style="width:40%;height:40%;padding:60px">
+      <img src="assets/images/menu6.jpg" style="width:40%;height:40%;padding:60px"> -->
+
+      <div>
+          <mat-list *ngFor="let childitem of subMenuItems">
+              <h2 style="font-style: italic; text-align:center;"> {{ childitem.name }} </h2>
+              <mat-list-item *ngFor="let item of childitem.items" style=" margin-left: 20pc">
+                <h3 matLine>
+                    <span style="font-style: oblique; font-size: 22px;"> {{item.item_name}} </span>
+                    <span style="float: right; margin-right: 22pc"> EUR {{item.item_price}} </span>
+                </h3>
+                <p matLine>
+                  <span> {{item.item_description}} </span>
+                </p>
+              </mat-list-item>
+            </mat-list>
+            
+            
+         <!--  <pre *ngFor="let childitem of subMenuItems">
+            {{ childitem.name }}
+            <div *ngFor="let item of childitem.items">
+              {{ item.item_name }} | {{ item.item_description }} | {{ item.item_price }}
+        </div>
+        </pre> -->
+    
+    </div>
 
 </div>
